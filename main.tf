@@ -43,7 +43,7 @@ module "provider" {
 
   terraform {
     backend "s3" {
-      bucket         = var.s3_bucket_name # Replace with your actual bucket name
+      bucket         = "terraform-dv" # Replace with your actual bucket name
       key            = "terraform/state.tfstate"   # Path inside the bucket
       region         = "us-east-1"                 # Replace with your AWS region
       encrypt        = true                         # Encrypts the state file
